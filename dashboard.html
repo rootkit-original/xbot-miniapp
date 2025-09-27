@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBot Dashboard</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard</h1>
+            <p>Visão geral do mercado e desempenho</p>
+        </header>
+
+        <div class="content">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Mercado</h3>
+                    <p class="stat-value">📉 BAIXA</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Volatilidade</h3>
+                    <p class="stat-value">⚠️ ALTA</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Sinais</h3>
+                    <p class="stat-value">2 ATIVOS</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Desempenho (7 dias)</h3>
+                <canvas id="performanceChart"></canvas>
+            </div>
+
+            <div class="active-signals">
+                <h3>Sinais Ativos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Moeda</th>
+                            <th>Direção</th>
+                            <th>Entrada</th>
+                            <th>Atual</th>
+                            <th>P/L</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SOL</td>
+                            <td>SHORT</td>
+                            <td>$127.80</td>
+                            <td>$125.40</td>
+                            <td class="positive">+1.9%</td>
+                        </tr>
+                        <tr>
+                            <td>DOT</td>
+                            <td>SHORT</td>
+                            <td>$7.45</td>
+                            <td>$7.23</td>
+                            <td class="positive">+3.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <button id="backButton" class="button">Voltar</button>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

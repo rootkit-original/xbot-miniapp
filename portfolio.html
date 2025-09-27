@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBot Portfolio</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Portfolio</h1>
+            <p>Gerenciamento de investimentos</p>
+        </header>
+
+        <div class="content">
+            <div class="portfolio-summary">
+                <h3>Resumo do Portfolio</h3>
+                <div class="balance">
+                    <p class="label">Saldo Total</p>
+                    <p class="value">$10,250.75</p>
+                    <p class="change positive">+5.2% (24h)</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Alocação de Ativos</h3>
+                <canvas id="portfolioChart"></canvas>
+            </div>
+
+            <div class="portfolio-assets">
+                <h3>Seus Ativos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ativo</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th>Valor</th>
+                            <th>24h</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BTC</td>
+                            <td>0.12</td>
+                            <td>$58,340</td>
+                            <td>$7,000.80</td>
+                            <td class="positive">+2.4%</td>
+                        </tr>
+                        <tr>
+                            <td>ETH</td>
+                            <td>1.5</td>
+                            <td>$1,850</td>
+                            <td>$2,775.00</td>
+                            <td class="negative">-1.2%</td>
+                        </tr>
+                        <tr>
+                            <td>SOL</td>
+                            <td>3.8</td>
+                            <td>$125.25</td>
+                            <td>$475.95</td>
+                            <td class="positive">+3.8%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <button id="backButton" class="button">Voltar</button>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>
